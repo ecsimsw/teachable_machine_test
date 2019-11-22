@@ -43,7 +43,10 @@
         const flip = true; // whether to flip the webcam
         webcam = new tmImage.Webcam(200, 200, flip); // width, height, flip
         await webcam.setup(); // request access to the webcam
+        alert('setup');
         await webcam.play();
+        
+        alert('play');
         window.requestAnimationFrame(loop);
 
         // append elements to the DOM
